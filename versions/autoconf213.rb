@@ -7,13 +7,6 @@ class Autoconf213 < Formula
 
   depends_on 'gawk'
 
-  keg_only <<-EOS.undent
-    autoconf-2.13 is required to build mozilla source.
-    In order to prevent conflicts with OSX or homebrew supplied autoconf, we
-    are defaulting this installation to keg-only. For info on building Mozilla:
-      http://developer.mozilla.org/en/build_documentation
-  EOS
-
   def install
     system "./configure", "--disable-debug", "--disable-dependency-tracking",
                           "--program-suffix=213",
